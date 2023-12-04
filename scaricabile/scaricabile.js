@@ -159,24 +159,11 @@ function displayResults(){
   for (let x = 0; x < searchResult.result.length; x++) {
     let job = searchResult.result[x];
     let listItem = document.createElement("li");
-    listItem.textContent = 'Title: $'
+    listItem.textContent = (job.title, job.location);
     resultsList.appendChild(listItem);
   }
 }
 
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = "http://code.jquery.com/jquery-3.7.1.js";
-
-    script.onReadyStateChange = handler;
-    script.onload = handler;
-
-    head.appendChild(script);
-
-    function handler(){
-       console.log('jquery added :)');
-    }
 
 
 
